@@ -1,20 +1,20 @@
 
 # Table of Contents
 
-1.  [0x00. ES6<sub>basic</sub>](#orgd3af8f6)
-2.  [Tasks](#orga030d78)
+1.  [0.00. ES6 basics](#org4cf4a6c)
+2.  [Tasks](#orga17b3c1)
 
 
-<a id="orgd3af8f6"></a>
+<a id="org4cf4a6c"></a>
 
-# 0x00. ES6<sub>basic</sub>
+# 0.00. ES6 basics
 
-An introduction to ES6 features
+How to use some of the key ES6 features
 
 
-<a id="orga030d78"></a>
+<a id="orga17b3c1"></a>
 
 # Tasks
 
-1.  0-constants.js
+1.  <./0-constants.js>
 
