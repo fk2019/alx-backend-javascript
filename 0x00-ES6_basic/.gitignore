@@ -1,0 +1,5 @@
+*~
+*.org
+node_modules/
+package*
+babel*
