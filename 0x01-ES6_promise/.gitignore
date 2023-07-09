@@ -1,0 +1,8 @@
+*~
+*.org
+node_modules/
+package*
+babel*
+*main.js
+*lintrc.js
+utils.js
