@@ -16,5 +16,5 @@ How to use some of the key ES6 features
 
 # Tasks
 
-1.  <./0-constants.js>
+1.  [0-constants.js]('./constants.js')
 
