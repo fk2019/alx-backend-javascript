@@ -17,9 +17,11 @@ const student2: Student = {
   location: 'Wano'
 }
 const studentsList: Student[] = [student1, student2];
-const n = [...studentsList].map((item) => {
-  delete item.lastName;
-  delete item.age;
-  return item;
+const n = studentsList.map((item) => {
+  const newItem = {...item}
+  delete newItem.lastName;
+  delete newItem.age;
+  return newItem;
 });
+console.log(studentsList)
 console.table(n);
