@@ -29,11 +29,11 @@ const countStudents = (path) => {
     const lines = data.split('\n');
     const header = lines[0].split(',');
     const students = [];
-    for (let i = 1; i < lines.length; i++) {
+    for (let i = 1; i < lines.length; i += 1) {
       const values = lines[i].split(',');
       if (values.length === header.length) {
         const student = {};
-        for (let j = 0; j < header.length; j++) {
+        for (let j = 0; j < header.length; j += 1) {
           student[header[j]] = values[j];
         }
         students.push(student);
