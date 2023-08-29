@@ -61,8 +61,6 @@ const app = http.createServer(async (req, res) => {
     } catch (error) {
       res.end(error.message);
     }
-  } else {
-    res.end('404 - Not Found\n');
   }
 });
 
