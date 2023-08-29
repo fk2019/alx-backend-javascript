@@ -3,11 +3,13 @@ const fs = require('fs');
 const handleStudents = (students) => {
   const studentCount = {};
   students.forEach((student) => {
-    const { firstName, lastName, age, field } = student;
-    if (firstName && lastName && age && field) {
+    const {
+      firstname, lastname, age, field,
+    } = student;
+    if (firstname && lastname && age && field) {
       if (!studentCount[field]) studentCount[field] = [];
     }
-    studentCount[field].push(firstName);
+    studentCount[field].push(firstname);
   });
   let totalStudents = 0;
   Object.values(studentCount).forEach((names) => {
