@@ -44,8 +44,7 @@ function countStudents(path) {
         console.log(`Number of students in ${field}: ${names.length}. List: ${names.join(', ')}`);
         result.push(`Number of students in ${field}: ${names.length}. List: ${names.join(', ')}`);
       }
-      console.log(result)
-      resolve(result.join('\n' ));
+      resolve(result.join('\n'));
     });
   });
 }
