@@ -8,7 +8,7 @@ app.use('/', routes);
 app.use('/students', routes);
 app.use('/students:major', routes);
 
-app.listen(port, host, () => {
+app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
-module.export default app;
+export default app;
