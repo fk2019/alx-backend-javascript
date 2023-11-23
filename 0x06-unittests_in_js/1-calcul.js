@@ -1,3 +1,5 @@
+const isNegativeZero = (num) => num === 0 && 1 / num === -Infinity;
+
 const calculateNumber = (type, a, b) => {
   const a1 = Math.round(a);
   const b1 = Math.round(b);
@@ -8,7 +10,9 @@ const calculateNumber = (type, a, b) => {
     return a1 - b1;
   }
   if (type === 'DIVIDE') {
-    return b1 === 0 ? 'Error' : a1 / b1;
+    if (b1 === 0) return 'Error';
+    const result = a1 / b1;
+    return isNegativeZero(result) ? 0 : result;
   }
   return (0);
 };
