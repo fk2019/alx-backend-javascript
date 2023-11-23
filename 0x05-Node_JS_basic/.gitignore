@@ -1,7 +1,4 @@
 *~
 *main.js
-*config.js
 package-lock*
 node_modules/
-*.csv
-.eslintrc.js

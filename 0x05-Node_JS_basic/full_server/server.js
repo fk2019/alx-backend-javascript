@@ -11,4 +11,4 @@ app.use('/students:major', routes);
 app.listen(port, host, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
-export default app;
+module.export default app;
