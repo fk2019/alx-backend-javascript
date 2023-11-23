@@ -1,20 +1,19 @@
-const isNegativeZero = (num) => num === 0 && 1 / num === -Infinity;
+function calculateNumber(type, a, b) {
+  const n1 = Math.round(a);
+  const n2 = Math.round(b);
 
-const calculateNumber = (type, a, b) => {
-  const a1 = Math.round(a);
-  const b1 = Math.round(b);
-  if (type === 'SUM') {
-    return a1 + b1;
-  }
   if (type === 'SUBTRACT') {
-    return a1 - b1;
+    return n1 - n2;
   }
+
   if (type === 'DIVIDE') {
-    if (b1 === 0) return 'Error';
-    const result = a1 / b1;
-    return isNegativeZero(result) ? 0 : result;
+    if (n2 === 0) {
+      return 'Error';
+    }
+    return n1 / n2;
   }
-  return (0);
-};
+
+  return n1 + n2;
+}
 
 module.exports = calculateNumber;
