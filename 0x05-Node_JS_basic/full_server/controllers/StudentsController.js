@@ -9,13 +9,13 @@ class StudentsController {
       const result = [];
       result.push('This is the list of our students');
       for (const key in sdata) {
-        if (sdata.hasOwnProperty(key)) result.push(`Number of students in ${key}: ${sdata[key].length}. List: ${sdata[key].join(', ')}`);
+        if (Object.hasOwn(sdata, key)) result.push(`Number of students in ${key}: ${sdata[key].length}. List: ${sdata[key].join(', ')}`);
       }
       response.status(200).send(result.join('\n'));
     }).catch(() => { response.status(500).send('Cannot load the database'); });
   }
 
-  static getAllStudentsByMajor (request, response) {
+  static getAllStudentsByMajor(request, response) {
     const params = ['CS', 'SWE'];
     const par = request.params.major;
     if (!params.includes(par)) {
