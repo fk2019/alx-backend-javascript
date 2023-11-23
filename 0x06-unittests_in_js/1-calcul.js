@@ -10,7 +10,7 @@ const calculateNumber = (type, a, b) => {
   if (type === 'DIVIDE') {
     return b1 === 0 ? 'Error' : a1 / b1;
   }
-  return 'Error';
+  return (0);
 };
 
 module.exports = calculateNumber;
