@@ -4,24 +4,37 @@ interface Student {
   age: number;
   location: string;
 }
+
 const student1: Student = {
-  firstName: 'Monkey D.',
-  lastName: 'Luffy',
-  age: 25,
-  location: 'Wano'
-}
+  firstName: "francis",
+  lastName: "kamau",
+  age: 12,
+  location: "kenya"
+};
+
 const student2: Student = {
-  firstName: 'Nico',
-  lastName: 'Robin',
-  age: 28,
-  location: 'Wano'
-}
+  firstName: "luffy",
+  lastName: "D.",
+  age: 20,
+  location: "wano"
+};
+
 const studentsList: Student[] = [student1, student2];
-const n = studentsList.map((item) => {
-  const newItem = {...item}
-  delete newItem.lastName;
-  delete newItem.age;
-  return newItem;
+
+const table = document.createElement("table");
+
+studentsList.forEach((student) => {
+ const row = document.createElement("tr");
+
+ const firstNameCell = document.createElement("td");
+ firstNameCell.textContent = student.firstName;
+ row.appendChild(firstNameCell);
+
+  const locationCell = document.createElement("td");
+  locationCell.textContent = student.location;
+  row.appendChild(locationCell);
+
+  table.appendChild(row);
 });
-console.log(studentsList)
-console.table(n);
+
+document.body.appendChild(table);
